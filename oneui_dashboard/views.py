@@ -17,7 +17,5 @@ def home(request):
 
 		context={
 			'response_list':response_json
-
 		}
-
-	return render(request, "oneui_dashboard.html",context)
+		return render(request, "oneui_dashboard.html",context)
