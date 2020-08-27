@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.utils.translation import gettext_noop
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -121,3 +122,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'oneui/static')]
 
+LOGIN_URL = gettext_noop('/auth/login/')
+LOGOUT_URL = gettext_noop('/auth/logout/')
+LOGIN_REDIRECT_URL = gettext_noop('/oneui_dashboard')

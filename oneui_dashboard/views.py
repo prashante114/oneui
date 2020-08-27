@@ -7,15 +7,11 @@ from django.http import HttpResponse
 import requests
 import json
 from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
 def home(request):
-	response = requests.get("http://hlx.li/tmp/lpb/payload.json?api_key=developer_key")
-	if response.status_code ==200:
-		response_json =json.loads(response.text)
-
-		context={
-			'response_list':response_json
-		}
-	return render(request, "oneui_dashboard.html",context)
+	
+	return render(request, "oneui_dashboard.html",{})

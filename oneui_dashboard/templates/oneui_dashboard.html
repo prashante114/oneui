@@ -1,352 +1,186 @@
-<!doctype html>
+<!DOCTYPE html>
 {% load static %}  
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+<!-- 
+Easy Profile Template
+http://www.templatemo.com/tm-467-easy-profile
+-->
+    <!-- stylesheet css -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static '/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static '/css/templatemo-blue.css'%}">
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
 
-        <title>OneUI Assignment</title>
+<!-- preloader section -->
+<div class="preloader">
+    <div class="sk-spinner sk-spinner-wordpress">
+       <span class="sk-inner-circle"></span>
+     </div>
+</div>
 
-        <!-- Icons -->
-        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-        <link rel="shortcut icon" href="{% static '/media/favicons/favicon.png'%}">
-        <link rel="icon" type="image/png" sizes="192x192" href="{% static '/media/favicons/favicon-192x192.png'%}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static '/media/favicons/apple-touch-icon-180x180.png'%}">
-        <!-- END Icons -->
-
-        <!-- Stylesheets -->
-        <!-- Fonts and OneUI framework -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
-        <link rel="stylesheet" id="css-main" href="{% static '/css/oneui.min.css'%}">
-
-    </head>
-    <body>
-        <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed">
-            <!-- Side Overlay-->
-            <aside id="side-overlay" class="font-size-sm">
-                <!-- Side Header -->
-                <div class="content-header border-bottom">
-                    <!-- User Avatar -->
-                    <a class="img-link mr-1" href="javascript:void(0)">
-                        <img class="img-avatar img-avatar32" src="{% static 'media/avatars/avatar10.jpg'%}" alt="">
-
-                    </a>
-                    <!-- END User Avatar -->
-
-                    <!-- User Info -->
-                    <div class="ml-2">
-                        <a class="link-fx text-dark font-w600" href="javascript:void(0)">Administrator</a>
-                    </div>
-                    <!-- END User Info -->
-
-                    <!-- Close Side Overlay -->
-                    <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                    <a class="ml-auto btn btn-sm btn-alt-danger" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
-                        <i class="fa fa-fw fa-times"></i>
-                    </a>
-                    <!-- END Close Side Overlay -->
-                </div>
-                <!-- END Side Header -->
-
-                <!-- Side Content -->
-                <div class="content-side">
-                    <!-- Side Overlay Tabs -->
-                    <div class="block block-transparent pull-x pull-t">
-                        <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-toggle="tabs" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#so-section1">
-                                    <i class="fa fa-fw fa-link text-gray mr-1"></i> Section 1
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#so-section2">
-                                    <i class="fa fa-fw fa-link text-gray mr-1"></i> Section 2
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="block-content tab-content overflow-hidden">
-                            <!-- Section 1 -->
-                            <div class="tab-pane pull-x fade fade-left show active" id="so-section1" role="tabpanel">
-                                <div class="block">
-                                    <div class="block-header block-header-default">
-                                        <h3 class="block-title">Section 1</h3>
-                                        <div class="block-options">
-                                            <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                                <i class="si si-refresh"></i>
-                                            </button>
-                                            <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
-                                        </div>
-                                    </div>
-                                    <div class="block-content">
-                                        <p>
-                                            ...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Section 1 -->
-
-                            <!-- Section 2 -->
-                            <div class="tab-pane pull-x fade fade-right" id="so-section2" role="tabpanel">
-                                <div class="block">
-                                    <div class="block-header block-header-default">
-                                        <h3 class="block-title">Section 2</h3>
-                                        <div class="block-options">
-                                            <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                                <i class="si si-refresh"></i>
-                                            </button>
-                                            <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
-                                        </div>
-                                    </div>
-                                    <div class="block-content">
-                                        <p>
-                                            ...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Section 2 -->
-                        </div>
-                    </div>
-                    <!-- END Side Overlay Tabs -->
-                </div>
-                <!-- END Side Content -->
-            </aside>
-            <!-- END Side Overlay -->
-            <nav id="sidebar" aria-label="Main Navigation">
-                <!-- Side Header -->
-                <div class="content-header bg-white-5">
-                    <!-- Logo -->
-                    <a class="font-w600 text-dual" href="">
-                        <i class="fa fa-circle-notch text-primary"></i>
-                        <span class="smini-hide">
-                            <span class="font-w700 font-size-h5">ne</span>
-                        </span>
-                    </a>
-                    <!-- END Logo -->
-
-                    <!-- Options -->
-                    <div>
-                        <!-- Close Sidebar, Visible only on mobile screens -->
-                        <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                        <a class="d-lg-none text-dual ml-3" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
-                            <i class="fa fa-times"></i>
-                        </a>
-                        <!-- END Close Sidebar -->
-                    </div>
-                    <!-- END Options -->
-                </div>
-                <!-- END Side Header -->
-
-                <!-- Side Navigation -->
-                <div class="content-side content-side-full">
-                    <ul class="nav-main">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link active" href="gs_backend.html">
-                                <i class="nav-main-link-icon si si-speedometer"></i>
-                                <span class="nav-main-link-name">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-heading">Heading</li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon si si-puzzle"></i>
-                                <span class="nav-main-link-name">Dropdown</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- END Side Navigation -->
-            </nav>
-            <!-- END Sidebar -->
-
-            <!-- Header -->
-            <header id="page-header">
-                <!-- Header Content -->
-                <div class="content-header">
-                    <!-- Left Section -->
-                    <div class="d-flex align-items-center">
-                        <!-- Toggle Sidebar -->
-                        <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
-                        <button type="button" class="btn btn-sm btn-dual mr-2 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
-                            <i class="fa fa-fw fa-bars"></i>
-                        </button>
-                        <!-- END Toggle Sidebar -->
-
-                        <!-- Toggle Mini Sidebar -->
-                        <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
-                        <button type="button" class="btn btn-sm btn-dual mr-2 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
-                            <i class="fa fa-fw fa-ellipsis-v"></i>
-                        </button>
-                        <!-- END Toggle Mini Sidebar -->
-
-                        <!-- Open Search Section (visible on smaller screens) -->
-                        <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                        <button type="button" class="btn btn-sm btn-dual d-sm-none" data-toggle="layout" data-action="header_search_on">
-                            <i class="si si-magnifier"></i>
-                        </button>
-                        <!-- END Open Search Section -->
-
-                        <!-- Search Form (visible on larger screens) -->
-                        <form class="d-none d-sm-inline-block" method="POST">
-                            <div class="input-group input-group-sm">
-                                <input type="text" class="form-control form-control-alt" placeholder="Search.." id="page-header-search-input2" name="page-header-search-input2">
-                                <div class="input-group-append">
-                                    <span class="input-group-text bg-body border-0">
-                                        <i class="si si-magnifier"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- END Search Form -->
-                    </div>
-                    <!-- END Left Section -->
-
-                    <!-- Right Section -->
-                    <div class="d-flex align-items-center">
-                        <!-- User Dropdown -->
-                        <div class="dropdown d-inline-block ml-2">
-                            <button type="button" class="btn btn-sm btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded" src="{% static 'media/avatars/avatar10.jpg'%}" alt="Header Avatar" style="width: 18px;">
-                                <span class="d-none d-sm-inline-block ml-1">{{ user.get_username }}</span>
-                                <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right p-0 border-0 font-size-sm" aria-labelledby="page-header-user-dropdown">
-                                <div class="p-3 text-center bg-primary">
-                                </div>
-                                <div class="p-2">
-                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="">
-                                        <span>Log Out</span>
-                                        <i class="si si-logout ml-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END User Dropdown -->
-
-                    </div>
-                    <!-- END Right Section -->
-                </div>
-                <!-- END Header Content -->
-
-                <!-- Header Search -->
-                <div id="page-header-search" class="overlay-header bg-white">
-                    <div class="content-header">
-                        <form class="w-100" method="POST">
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-prepend">
-                                    <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                                    <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
-                                        <i class="fa fa-fw fa-times-circle"></i>
-                                    </button>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- END Header Search -->
-
-                <!-- Header Loader -->
-                <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
-                <div id="page-header-loader" class="overlay-header bg-white">
-                    <div class="content-header">
-                        <div class="w-100 text-center">
-                            <i class="fa fa-fw fa-circle-notch fa-spin"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Header Loader -->
-            </header>
-            <!-- END Header -->
-
-            <!-- Main Container -->
-            <main id="main-container">
-
-                <!-- Hero -->
-                <div class="bg-body-light">
-                    <div class="content content-full">
-                        <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center">
-                            <nav class="flex-sm-00-auto ml-sm-3" aria-label="breadcrumb">
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Hero -->
-
-                <!-- Page Content -->
-                <div class="content">
-                    <!-- Your Block -->
-                    <div class="block">
-                        <div class="block-header">
-                            <h3 class="block-title">
-                                Stock Report
-                            </h3>
-                            <div class="block-options">
-                                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>
-                                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="pinned_toggle">
-                                    <i class="si si-pin"></i>
-                                </button>
-                                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
-                                    <i class="si si-refresh"></i>
-                                </button>
-                                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
-                                <button type="button" class="btn-block-option" data-toggle="block-option" data-action="close">
-                                    <i class="si si-close"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="block-content font-size-sm">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                      <th scope="col">Company Name</th>
-                                      <th scope="col">Buyer</th>
-                                      <th scope="col">ParentID</th>
-                                      <th scope="col">ASIN</th>
-                                      <th scope="col">Refund Qty</th>
-                                      <th scope="col">Return Qty</th>
-                                    </tr>
-                                </thead>
-                              <tbody>
-                                {% for dict_item in response_list %}
-                                <tr>
-                                  <td>{{dict_item.CompanyName}}</td>
-                                  <td>{{dict_item.Buyer}}</td>
-                                  <td>{{dict_item.ParentID}}</td>
-                                  <td>{{dict_item.ASIN}}</td>
-                                  <td>{{dict_item.RefundQty}}</td>
-                                  <td>{{dict_item.ReturnQty}}</td>
-                                </tr>
-                                {% endfor %}
-                              </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-            </main>
-            <!-- END Main Container -->
-
-            <!-- Footer -->
-            <footer id="page-footer" class="bg-body-light">
-                <div class="content py-3">
-                    <div class="row font-size-sm">
-                        <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">
-                            Crafted with <i class="fa fa-heart text-danger"></i> by <a class="font-w600" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
-                        </div>
-                        <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-left">
-                            <a class="font-w600" href="https://1.envato.market/AVD6j" target="_blank">OneUI 4.6</a> &copy; <span data-toggle="year-copy"></span>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- END Footer -->
+<!-- header section -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <img src="{% static '/images/tm-easy-profile.jpg' %}" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
+                <hr>
+                <h1 class="tm-title bold shadow">Hi, I am Prashant Joshi</h1>
+                <h1 class="white bold shadow">Python Developer</h1>
+            </div>
         </div>
-        <!-- END Page Container -->
+    </div>
+</header>
 
-        <!-- OneUI JS -->
-        <script src="{% static '/js/oneui.app.min.js' %}" type="text/javascript"></script> 
-        <script src="{% static '/js/oneui.core.min.js' %}" type="text/javascript"></script>  
-    </body>
+<!-- about and skills section -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="about">
+                <h3 class="accent">PROFILE SUMMARY</h3>
+                <h2></h2>
+                <p>I have 3+ years of experience in Python Development, currently working as python developer.</br>
+                   I have experience in Django and Frappe Framework.</br>
+                   I have Hands on experience in REST API,Payment Gateway Integration,Mysql,Linux,Javascript.</br>
+                   Currently I am pursuing AWS Solution Architect Certification
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="skills">
+                <h2 class="white">Skills</h2>
+                <strong>Python </strong>
+                <span class="pull-right">70%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" 
+                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                    </div>
+                <strong>Javascript</strong>
+                <span class="pull-right">60%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" 
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                    </div>
+                <strong>MySQL</strong>
+                <span class="pull-right">60%</span>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" 
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                    </div>
+                <strong>Web2py, Frappe, Django,REST Api,Payment Gateway Integration</strong>
+                <div >
+                        <div class="progress-bar progress-bar-primary" role="progressbar" 
+                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                </div>
+                <strong>Pursuing AWS Solution Architect Certification</strong>
+                    
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- education and languages -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <div class="education">
+                <h2 class="white">Education</h2>
+                    <div class="education-content">
+                        <h4 class="education-title accent">Master In Computer Application</h4>
+                            <div class="education-school">
+                                <h5>Sinhgad Institute of Mgt, Pune University</h5><span></span>
+                                <h5>2013 Aug - 2016 Sept</h5>
+                            </div>
+                        <h4 class="education-title accent">Bachelor Of Computer Application</h4>
+                            <div class="education-school">
+                                <h5>S. R. T. M. University Nanded</h5><span></span>
+                                <h5>2010 Aug - 2013 Sept</h5>
+                            </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="languages">
+                <h2>Languages</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Hindi</li>
+                        <li>Marathi</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact and experience -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="contact">
+                <h2>Contact</h2>
+                    <p><i class="fa fa-map-marker"></i> Lake Vista Society,Pune</p>
+                    <p><i class="fa fa-phone"></i> +91 9561018552</p>
+                    <p><i class="fa fa-envelope"></i>prashante114@gmail.com</p>
+            </div>
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div class="experience">
+                <h2 class="white">Experiences</h2>
+                    <div class="experience-content">
+                        <h4 class="experience-title accent">Software Developer</h4>
+                        <h5>New Indictrans Technologies Pvt Ltd, Pune</h5><span></span>
+                        <h5>2017 November - Present</h5>
+                    </div>
+                    <div class="experience-content">
+                        <h4 class="experience-title accent">Digital Prizm InfoTech</h4>
+                        <h5>Associate Software Developer</h5><span></span>
+                        <h5>2016 October - 2017 October </h5>
+                    </div>
+                    <div class="experience-content">
+                        <h4 class="experience-title accent">Associate Software Develope</h4>
+                        <h5>Digital Prizm InfoTech</h5><span></span>
+                        <h5>2016 October - 2017 October </h5>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer section -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <p>Copyright &copy; 2084 Your Easy Profile</p>
+                <ul class="social-icons">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-dribbble"></a></li>
+                    <li><a href="#" class="fa fa-github"></a></li>
+                    <li><a href="#" class="fa fa-behance"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- javascript js -->  
+<script src="{% static '/js/jquery.js' %}"></script>
+<script src="{% static '/js/bootstrap.min.js' %}"></script> 
+<script src="{% static '/js/jquery.backstretch.min.js' %}"></script>
+<script src="{% static '/js/custom.js' %}"></script>
+
+</body>
 </html>
+
+
